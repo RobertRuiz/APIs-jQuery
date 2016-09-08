@@ -1,0 +1,42 @@
+<%= form_for(term) do |f| %>
+  <% if term.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(term.errors.count, "error") %> prohibited this term from being saved:</h2>
+
+      <ul>
+      <% term.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group field">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control input-lg" %>
+   </div>
+
+  <div class="form-group field">
+    <%= f.label :definition %>
+    <%= f.text_field :definition, class: "form-control" %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.label :author %>
+    <%= f.text_field :author, class: "form-control" %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.label :web_link %>
+    <%= f.text_field :web_link, class: "form-control" %>
+  </div>
+
+  <div class="form-group field">
+    <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name)  %>
+    <%= category.label { category.check_box } %>
+   </div>
+
+  <div class="actions">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
