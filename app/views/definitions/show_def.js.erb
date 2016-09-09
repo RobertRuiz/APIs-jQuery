@@ -1,0 +1,10 @@
+// This is what we eventually want.
+$(".found-definitions").html("<ul><% @definitions.each do |definition| %><li><%= j(definition) %></li><% end %></ul>")
+
+
+// <ul><% @definitions.each do |definition| %>
+//   <li>
+//     <% definition %>
+//   </li>
+//   <% end %>
+// </ul>

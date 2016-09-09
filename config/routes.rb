@@ -23,7 +23,6 @@ Rails.application.routes.draw do
   get    '/auth/:provider'          => 'omniauth#auth', as: :auth
   get    '/auth/:provider/callback' => 'session#create'
   get    '/auth/failure'            => 'session#failure'
-  # get    'definitions/show_def'     => 'response'
 
   # get 'response' => '("http://api.wordnik.com:80/v4/word.json/ruby/definitions?api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5")'
 

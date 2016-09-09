@@ -1,16 +1,11 @@
 
 <div class="actions">
- <!-- <%= button_to "Find Definitions", { :action => "new" }, :method => :get, class: "btn btn-primary" %> -->
-  <button <a class="btn btn-primary find-definitions", onclick="myFunction()">Find Definitions</a> </button>
-
-<script>
-function myFunction() {
-    alert("Rob alert!");
-}
-</script>
+  <a class="btn btn-primary find-definitions">Find Definitions</a>
  <!-- puts response = HTTParty.get("http://api.wordnik.com:80/v4/word.json/ruby/definitions?api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5")
  puts response.body, response.code, response.message, response.headers.inspect -->
 </div>
+
+
 
 <%= form_for(term) do |f| %>
   <% if term.errors.any? %>
@@ -33,6 +28,9 @@ function myFunction() {
   <div class="form-group field">
     <%= f.label :definition %>
     <%= f.text_field :definition, class: "form-control" %>
+  </div>
+
+  <div class="found-definitions">
   </div>
 
   <div class="form-group field">
