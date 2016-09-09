@@ -61,3 +61,5 @@ gem 'omniauth-github'
 
 # Environment
 gem 'dotenv-rails'
+
+gem 'httparty', '~> 0.14.0'
