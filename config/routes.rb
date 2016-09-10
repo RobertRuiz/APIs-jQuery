@@ -24,8 +24,6 @@ Rails.application.routes.draw do
   get    '/auth/:provider/callback' => 'session#create'
   get    '/auth/failure'            => 'session#failure'
 
-  # get 'response' => '("http://api.wordnik.com:80/v4/word.json/ruby/definitions?api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5")'
-
   # For details on the DSL available within this file,
   # see http://guides.rubyonrails.org/routing.html
 end
